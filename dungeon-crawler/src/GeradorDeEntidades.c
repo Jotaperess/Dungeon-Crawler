@@ -49,7 +49,9 @@ void gerarentidade(int tamanho, char mapa[tamanho][tamanho], int fase){
             mapa[5][35] = '>';
             mapa[35][5] = '>';
             mapa[30][10] = 'V';      
-            mapa[12][10] = 'X';      
+            mapa[12][10] = 'X';
+			mapa[34][34] = '@';  
+            mapa[31][25] = 'O';      
 
             for (i = 20; i < 36; i++) {
                 for (j = 20; j < 36; j++) {
@@ -68,8 +70,7 @@ void gerarentidade(int tamanho, char mapa[tamanho][tamanho], int fase){
                     mapa[32][j] = ' ';
             }
 
-            mapa[34][34] = '@';  
-            mapa[31][25] = 'O';  
+              
 
             break;
     }
