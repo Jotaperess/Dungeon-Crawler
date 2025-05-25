@@ -38,7 +38,7 @@ void movimentamonstro(int tamanho, char mapa[tamanho][tamanho], int *x, int *y) 
         case 's': xmonstro++; break;
         case 'a': ymonstro--; break;
         case 'd': ymonstro++; break;
-        default: return;
+        default: return;j
     }
 
     if (mapa[xmonstro][ymonstro] == ' ') {

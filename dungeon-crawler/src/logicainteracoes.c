@@ -22,6 +22,25 @@ void interagir_chave_dano(int tamanho, char mapa[tamanho][tamanho], int *x, int 
         (*vidas)--;
         *x = 1;
         *y = 1;
+        mapa[*x][*y] = '&';
+    }
+
+    // Teleporte '>'
+    if (posicao == '>') {
+        // Na fase 4, teleporte entre (5,35) e (35,5)
+        if (*fase == 4) {
+            if (*x == 5 && *y == 35) {
+                mapa[*x][*y] = ' ';  // limpar posição antiga
+                *x = 35;
+                *y = 5;
+                mapa[*x][*y] = '&';  // mover jogador para o outro teleporte
+            } else if (*x == 35 && *y == 5) {
+                mapa[*x][*y] = ' ';
+                *x = 5;
+                *y = 35;
+                mapa[*x][*y] = '&';
+            }
+        }
     }
 }
 
